@@ -79,6 +79,8 @@ let g:syntastic_check_on_wq = 0
 map <C-m> :NERDTreeToggle<CR>
 " exits vim when NERDTree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" show hidden files
+let NERDTreeShowHidden=1
 
 " fzf
 set rtp+=/usr/local/opt/fzf
