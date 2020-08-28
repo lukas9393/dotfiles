@@ -96,7 +96,8 @@ let g:tex_conceal='abdmg'
 hi Conceal ctermbg=none
 
 " spell check
-autocmd FileType latex,tex,md,markdown setlocal spelllang=en_us,de spell
+autocmd FileType latex,tex,md,markdown,gitcommit setlocal spelllang=en_us,de spell
+set complete+=kspell
 set spellfile=~/.config/nvim/spell/de.utf-8.add
 set dictionary=~/.config/nvim/dict/de.dict
 

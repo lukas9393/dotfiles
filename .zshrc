@@ -7,3 +7,5 @@ export LC_ALL=en_US.UTF-8
 
 # show hidden files in the nvim file search
 export FZF_DEFAULT_COMMAND='find .'
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
