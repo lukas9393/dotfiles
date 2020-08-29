@@ -30,8 +30,26 @@ Plug 'tpope/vim-fugitive'
 " latex
 Plug 'lervag/vimtex'
 
-" Conceal
+" conceal
 Plug 'KeitaNakamura/tex-conceal.vim'
+
+" buffer line
+Plug 'mengelbrecht/lightline-bufferline'
+
+" tests
+Plug 'vim-test/vim-test'
+
+" shows git diff
+Plug 'airblade/vim-gitgutter'
+
+" comment stuff out
+Plug 'tpope/vim-commentary'
+
+" linter controller
+Plug 'dense-analysis/ale'
+
+" php support
+Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 " buffer
@@ -100,7 +118,28 @@ autocmd FileType latex,tex,md,markdown,gitcommit setlocal spelllang=en_us,de spe
 set complete+=kspell
 set spellfile=~/.config/nvim/spell/de.utf-8.add
 set dictionary=~/.config/nvim/dict/de.dict
+hi clear SpellBad
+hi SpellBad ctermfg=darkred
 
 " highlight the cursor
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkgrey	 ctermfg=white
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+hi CursorLine guibg=#303000 ctermbg=234
+
+" tabline
+set showtabline=2
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+let g:lightline                  = {'colorscheme': 'wombat',}
+let g:lightline.active           = {'left': [[ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ]]}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+" php
+let g:ale_php_phpstan_level=5
+let php_var_selector_is_identifier=1
