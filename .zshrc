@@ -20,4 +20,4 @@ zstyle ':vcs_info:git:*' formats '%F{blue}(%b)%f '
  
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='%~ ${vcs_info_msg_0_}%(?.%F{green}$.%F{red}$)%f '
+PROMPT='%2~ ${vcs_info_msg_0_}%(?.%F{green}$.%F{red}$)%f '

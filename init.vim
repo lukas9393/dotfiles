@@ -15,9 +15,6 @@ Plug 'majutsushi/tagbar'
 " syntastic is a syntax checking plugin for Vim
 Plug 'vim-syntastic/syntastic'
 
-" is a file system explorer for the Vim editor
-Plug 'preservim/nerdtree'
-
 " status line
 Plug 'itchyny/lightline.vim'
 
@@ -92,13 +89,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" nerdtree
-map <C-m> :NERDTreeToggle<CR>
-" exits vim when NERDTree is the only window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" show hidden files
-let NERDTreeShowHidden=1
 
 " fzf
 set rtp+=/usr/local/opt/fzf
