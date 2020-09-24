@@ -5,6 +5,9 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# activate ls colors output
+export CLICOLOR=1
+
 # show hidden files in the nvim file search
 export FZF_DEFAULT_COMMAND='find .'
 
@@ -25,6 +28,7 @@ PROMPT='%(1j.%F{yellow}[%j]%f .)%2~ ${vcs_info_msg_0_}%(?.%F{green}$.%F{red}$)%f
 # PHP support
 export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Ruby support
 export PATH="/usr/local/opt/ruby/bin:$PATH"

@@ -34,6 +34,7 @@ call plug#end()
 set backspace=indent,eol,start
 set termguicolors
 set number
+set spell spelllang=en_us
 noremap f :Files<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
@@ -86,3 +87,9 @@ let g:gutentags_ctags_exclude = [
       \ '.git',
       \ '.idea',
       \ ]
+
+" Work specific. If quit, remove this line
+au BufRead,BufNewFile *.md setlocal textwidth=100
+
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
