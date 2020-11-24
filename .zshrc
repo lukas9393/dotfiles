@@ -8,6 +8,9 @@ export LC_ALL=en_US.UTF-8
 # activate ls colors output
 export CLICOLOR=1
 
+# activate grep color output
+alias grep='grep --color=auto'
+
 # show hidden files in the nvim file search
 export FZF_DEFAULT_COMMAND='find .'
 

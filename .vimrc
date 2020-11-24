@@ -61,7 +61,6 @@ let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 " ale
-let g:ale_php_phpstan_executable = 'vendor/bin/phpstan'
 let g:ale_php_phpstan_level = 5
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {'php': ['phpcbf']}
