@@ -1,0 +1,40 @@
+[commit]
+	gpgsign = true
+
+[pull]
+	rebase = true
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	editor = vim
+	precomposeUnicode = true
+	hooksPath = no-hooks
+
+[init]
+	defaultBranch = main
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[url "ssh://git@bitbucket.org/"]
+	insteadOf = https://bitbucket.org/
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[push]
+	autoSetupRemote = true
+
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig

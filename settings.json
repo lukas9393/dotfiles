@@ -1,0 +1,23 @@
+{
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    80
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "editor.wrappingIndent": "same",
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "git.autofetch": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Solarized Light",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "security.workspace.trust.banner": "always",
+  "python.defaultInterpreterPath": "python3"
+}
