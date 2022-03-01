@@ -14,5 +14,6 @@
 [init]
 	defaultBranch = main
 
-[include]
-	path = ~/work/.gitconfig
+[user]
+  name = Lukas
+  email = 11976901+lukas9393@users.noreply.github.com
